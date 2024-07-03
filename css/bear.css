@@ -168,8 +168,8 @@ color: purple;
 .a.social-link:focus {
   cursor: pointer;
 }
-.gitlab {
-  fill: #FC6D26;
+.github {
+  fill: #181717;
 }
 .mastodon {
   fill: #6364FF
