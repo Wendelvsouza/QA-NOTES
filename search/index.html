@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+    <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett">
+  
+
+  
+  <title>search - Hexo</title>
+
+  
+
+
+<link rel="canonical" href="http://example.com/search/">
+
+<meta name="description" content="">
+
+
+
+<meta name="author" content="John Doe">
+
+
+  
+
+
+<meta property="og:site_name" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="search - Hexo">
+
+<meta property="og:description" content="">
+
+
+<meta property="og:url" content="http://example.com/search/">
+
+<meta name="robots" content="noai, noimageai">
+
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/bear.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" type="image/png" href="//images/thumbnail.png">
+    <link rel="apple-touch-icon" type="image/png" href="//images/thumbnail.png" />
+  
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <header class="header">
+  <a href="/" class="title" id="title">
+    <h1>
+      
+        <span aria-hidden="true" class="icon">
+          👩‍💻
+        </span>
+            
+      Blog
+      
+        <span aria-hidden="true" class="icon">
+          👩‍💻
+        </span>
+       
+    </h1>
+  </a>
+  <nav><p>
+  <a href="/">Home</a>
+  
+    
+    <a href="/archives">Blog</a>
+    
+  
+    
+    <a href="/projects">Projects</a>
+    
+  
+    
+    <a href="/atom.xml">RSS</a>
+    
+  
+    
+    <a href="/search/">Search</a>
+    
+  
+</p></nav>
+
+  <hr class="margin-bottom">
+</header>
+  <main>
+    
+  
+  <script>
+    function search() {
+      function entertext(e, t = 400) {
+        let n = -1;
+        return (...c) => {
+          clearTimeout(n), n = setTimeout(() => {
+            e(c)
+          }, t)
+        }
+      }
+
+      function t() {
+        r.innerHTML = "", "" != o.value.trim() && (l.innerHTML = "", n.forEach(e => {
+          if (e.title.toLowerCase().includes(o.value.toLowerCase())) {
+            let t = document.createElement("a");
+            t.href = e.url, t.text = e.title;
+            let n = document.createElement("li");
+            n.appendChild(t), l.appendChild(n)
+          }
+        }), r.appendChild(l))
+      }
+      let n;
+      fetch("/search.xml").then(e => e.json()).then(e => {
+        n = e.concat()
+      }).catch(console.error);
+      let c = entertext(t),
+        o = document.getElementById("search-input-text"),
+        r = document.getElementById("search-result"),
+        l = document.createDocumentFragment();
+      o.oninput = function () {
+        c()
+      }
+    }
+    window.addEventListener("load", search);
+  </script>
+  <section id="search">
+    <form>
+      <input type="text" class="search-input" id="search-input-text"
+        placeholder="search......">
+    </form>
+    <div id="search-result" class="search-result">
+      <ul>
+        No results
+      </ul>
+    </div>
+  </section>
+
+
+  </main>
+  
+  <footer class="footer">
+  
+    <p id="copyright">
+      CC-BY - <span>2024</span> ❄️ John Doe
+    </p>
+  
+</footer>
+
+</body>
+
+</html>
