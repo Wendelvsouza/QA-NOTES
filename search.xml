@@ -21,7 +21,7 @@
   <entry>
     <title>My New Post</title>
     <url>/2024/07/04/testando/</url>
-    <content><![CDATA[<p>testand<br><a href="/">Home</a> <a href="/projects/">Projects</a></p>
+    <content><![CDATA[<p>testand</p>
 <p>testand</p>
 ]]></content>
       <tags>
@@ -31,7 +31,6 @@
   <entry>
     <title>My Gallery</title>
     <url>/2024/07/04/My-Gallery/</url>
-    <content><![CDATA[<p><a href="/">Home</a> <a href="/projects/">Projects</a></p>
-]]></content>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
